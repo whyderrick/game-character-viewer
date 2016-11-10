@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
     @password = BCrypt::Password.create(new_password)
     self.password_hash = @password
   end
+
+  def valid_password?( input_password )
+    self.password == input_password
+  end
 end
