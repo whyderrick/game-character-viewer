@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
-  def valid_password?( input_password )
-    self.password == input_password
+  def valid_password?
+    self.password == params[:user][:password]
   end
 end

@@ -1,7 +1,24 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  console.log("Ready");
+  getExternalData();
 });
+
+var getExternalData = function() {
+  $(".external-request").on("submit", function(e){
+    e.preventDefault();
+    var form = this;
+    var method = $(form).attr("method");
+    var data = $(form).serialize()
+    console.log(data)
+    var url = $(form).attr("action");
+    $.ajax({
+      url: url,
+      method: method,
+      data: data
+    })
+    .done( function( msg ) {
+      console.log( msg )
+    } )
+
+  });
+};
