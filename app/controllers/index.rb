@@ -14,3 +14,8 @@ post '/' do
     "This will have the show for the given game"
   end
 end
+
+
+post '/new' do
+
+end

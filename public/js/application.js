@@ -18,6 +18,7 @@ var getExternalData = function() {
     })
     .done( function( msg ) {
       console.log( msg )
+      $( "#result" ).html( msg )
     } )
 
   });
