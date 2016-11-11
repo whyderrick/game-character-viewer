@@ -1,15 +1,17 @@
-<h1>Hello World!</h1>
+<div class="container">
+  <h1>Game Collector!</h1>
 
-<form id="request-game" class="external-request" action="/games" method="post">
-  <input type="text" name="query">
-  <input type="submit" value ="Find this game!">
-</form>
+  <form id="request-game" class="external-request" action="/games" method="post">
+    <input type="text" name="query">
+    <input type="submit" value ="Find this game!">
+  </form>
+<!--
+  <form id="request-character" class="external-request" action="/characters" method="post">
+    <input type="text" name="query">
+    <input type="submit" value ="Find this character!">
+  </form>
+ -->
+  <div id="result">
 
-<form id="request-character" class="external-request" action="/characters" method="post">
-  <input type="text" name="query">
-  <input type="submit" value ="Find this character!">
-</form>
-
-<div id="result">
-
+  </div>
 </div>

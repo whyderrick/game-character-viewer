@@ -1,3 +1,14 @@
-<h2>Game!</h2>
+<div class="container">
 
-<p><%= @game.title %></p>
+  <img class="cover" src="<%= @game.image %>" >
+  <h2><%= @game.title %></h2>
+  <p><%= @game.description%></p>
+  <% if @game.franchise %>
+    <p> This game is part of the <%= @game.franchise %>.</p>
+  <% end %>
+  <p> Originally released on <%= @game.platform %> </p>
+
+  <form action="/game/new" method="POST">
+    <input type="submit" value="Add to my collection!">
+  </form>
+</div>

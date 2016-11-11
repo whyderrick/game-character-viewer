@@ -7,7 +7,6 @@ class CreateGames < ActiveRecord::Migration
       t.string :image, null: false
       t.string :platform, null: false
 
-
       t.timestamps
     end
   end
