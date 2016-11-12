@@ -1,6 +1,7 @@
 $(document).ready(function() {
   console.log("Ready");
   getExternalData();
+  addGame();
 });
 
 var getExternalData = function() {
@@ -20,6 +21,9 @@ var getExternalData = function() {
       console.log( msg )
       $( "#result" ).html( msg )
     } )
-
   });
 };
+
+var addGame = function() {
+  $("#add-game").on("submit")
+}
