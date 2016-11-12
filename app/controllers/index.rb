@@ -15,7 +15,5 @@ post '/' do
   end
 end
 
-
-post '/new' do
-
+get '/login' do 
 end

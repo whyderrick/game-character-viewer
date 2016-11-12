@@ -1,7 +1,7 @@
 $(document).ready(function() {
   console.log("Ready");
   getExternalData();
-  addGame();
+
 });
 
 var getExternalData = function() {
@@ -10,7 +10,6 @@ var getExternalData = function() {
     var form = this;
     var method = $(form).attr("method");
     var data = $(form).serialize()
-    console.log(data)
     var url = $(form).attr("action");
     $.ajax({
       url: url,
@@ -18,12 +17,25 @@ var getExternalData = function() {
       data: data
     })
     .done( function( msg ) {
-      console.log( msg )
       $( "#result" ).html( msg )
     } )
   });
 };
 
-var addGame = function() {
-  $("#add-game").on("submit")
-}
+// var addGame = function() {
+//   $("#result").on("submit", "#add-game", function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     var form = this
+//     var url = $(form).attr("action")
+//     var method = $(form).attr("method")
+//     var data = $(form).serialize()
+//     // Might be on track to double post.
+//     $.ajax({
+//       url: url,
+//       method: method,
+//       data:  data
+//     })
+
+//   })
+// }

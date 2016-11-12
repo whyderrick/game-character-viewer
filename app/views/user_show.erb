@@ -1,0 +1,10 @@
+<h1>Your collection!</h1>
+
+<ul>
+<% @games.each do |game| %>
+	<dl>
+		<dt><a href= <%= "/games/#{game.id}" %> ><%= game.title %></a></dt>
+		<dd> <img class= "cover" src="<%= game.image%>"></dd>
+	</dl>
+<% end %>
+</ul>

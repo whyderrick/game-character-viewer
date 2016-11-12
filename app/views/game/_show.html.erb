@@ -4,11 +4,16 @@
   <h2><%= @game.title %></h2>
   <p><%= @game.description%></p>
   <% if @game.franchise %>
-    <p> This game is part of the <%= @game.franchise %>.</p>
+    <p> This game is part of the <%= @game.franchise %> franchise.</p>
   <% end %>
   <p> Originally released on <%= @game.platform %> </p>
-
-  <form id="add-game" action="/game/new" method="POST">
+  <form id="add-game" action="/games/new" method="POST">
+    <input type="hidden" name = "game[title]" value = '<%= @game.title %>' >
+    <input type="hidden" name = "game[description]" value = '<%= @game.description %>' >
+    <input type="hidden" name = "game[franchise]" value = '<%= @game.franchise %>' >
+    <input type="hidden" name = "game[image]" value = '<%= @game.image %>' >
+    <input type="hidden" name = "game[platform]" value = '<%= @game.platform %>' >
+ 
     <input type="submit" value="Add to my collection!">
   </form>
 </div>
